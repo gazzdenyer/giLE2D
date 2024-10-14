@@ -1,4 +1,4 @@
-This project is an oldie! It was meant to compliment "The Game Creator" product called AGK (app game kit), which is a development framework for mobile games.
+This project is an oldie! It was meant to compliment "The Game Creators" product called AGK (app game kit), which is a development framework for mobile games.
 The Game Creators can be forund at https://www.thegamecreators.com/ and the AGK framework at https://www.appgamekit.com/
 Since there was no simple 2D map/level editor around at the time, I decided to develop my own editor.
 This project was never completed and, as such, is published as learning code only.
