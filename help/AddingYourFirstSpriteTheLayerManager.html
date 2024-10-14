@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Adding Your First Sprite - The Layer Manager</title>
+<style type="text/css">
+.auto-style1 {
+	background-image: url('images/dirtCenter.png');
+}
+.auto-style2 {
+	text-align: center;
+}
+.auto-style3 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style4 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body style="background-image: url('images/castleCenter.png')">
+
+<div class="auto-style2">
+
+<table align="center" class="auto-style1" style="width: 80%">
+	<tr>
+		<td class="auto-style4"><strong>Adding Your First Sprite - The Layer 
+		Manager</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Well then, its time that we set up our map layers so that we can 
+		organize our sprites better.<br />
+		<br />
+		Layers are good because they allow us to code for groups of sprites that 
+		do the same thing (e.g. ground sprites, collectables, etc) and it also 
+		allows us to control the Z-Order in which they are rendered.<br />
+		<br />
+		With AGK as an example, it supports almost 10,000 layers. That means 
+		that sprite 1 can be behind sprite 2, which can be behind sprite 3, etc, 
+		etc.<br />
+		<br />
+		Although its not necessary to to so in <strong>giLE2D</strong>, its 
+		always great practice to define to yourself what types of objects are 
+		going to appear in your map up-front, before creating anything.<br />
+		<br />
+		With this in mind, lets have a look at <strong>giLE2D's</strong> Layer 
+		Manager.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    <strong>The Layer Manager</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    <table style="width: 100%">
+			<tr>
+				<td style="width: 255px">
+				<img alt="layer manager" height="726" longdesc="layer manager" src="images/layer_manager.png" width="247" /></td>
+				<td valign="top">First, click the "layer Manager" tab, as shown 
+				on the image to the left here.<br />
+				<br />
+				You will see a toolbar with four buttons on it, and a 
+				white-space which will show the list of layers that you have 
+				created/will create. The image on the left is a representation 
+				of "<em>here's one I did earlier...</em>"<br />
+				<br />
+				Lets say, for the sake of protracted gibbering, we want to have 
+				five layers in our map, because we have five discreet types of 
+				sprite that we want to have.<br />
+				<br />
+				These discreet types are:<br />
+				<br />
+				Map Geometry<br />
+				Liquids<br />
+				Collectables<br />
+				Player (most important!)<br />
+				SpringBoard<br />
+				<br />
+				When we go to actually add a sprite to the map, we are going to 
+				first select the sprite type (see<a href="AddingYourFirstSpriteSpriteTypes.html" target="_blank"> 
+				here</a>), and then choose the layer that the sprite belongs to.<br />
+				<br />
+				Anyway, before we get ahead of ourselves, lets add a layer.<br />
+				<br />
+				1. Click the "Add Layer" button
+				<img alt="layer add" height="25" longdesc="layer add" src="images/layer_add.png" width="29" /><br />
+				2. An "Add Layer" dialog will appear for you.<br />
+				<br />
+				<img alt="layer_add_dialog" height="179" longdesc="layer_add_dialog" src="images/layer_add_dialog.png" width="411" /><br />
+				<br />
+				3. Fill in the name of the layer you wish to create (in this 
+				case, "map Geometry").<br />
+				4. Click OK... the layer will now appear in the layer manager 
+				list for you to use.<br />
+				5. Repeat steps 1 - 4 for each of the other types (Liquids, 
+				Collectables,Player, SpringBoard)<br />
+				6. Note that each layer is given an ID that you can manipulate 
+				in your game code.</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    So, now we have our map layers.<br />
+		<br />
+		Note that we can also delete layers
+		<img alt="layer delete" height="25" longdesc="layer delete" src="images/layer_delete.png" width="29" /> 
+		or even change their order
+		<img alt="layer order" height="25" longdesc="layer order" src="images/layer_order.png" width="63" /><br />
+		<br />
+		Deleting layers has a number of considerations that need to be looked 
+		at, especially when you already have a bunch of sprites in your map that 
+		belong to the layer that you wish to delete. However, that is a topic 
+		for <a href="DeletingLayers.html" target="_blank">later discussion</a>.</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    So then, we know how to create layers...Are we getting nearer to adding 
+		an actual sprite to the map? Oh, yes, we are... oh, yes.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3" style="height: 22px">
+  	    </td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    If you want to continue on to <em>REALLY</em> adding a sprite,&nbsp; 
+		then go ahead and<strong><a href="AdjustingYourSpriteMoveAndSnap.html" target="_blank"> 
+		click here</a></strong>, else go back to the <a href="index.html">
+		<strong>home screen</strong></a>!</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    &nbsp;</td>
+	</tr>
+	</table>
+
+<p class="auto-style4">&nbsp;</p>
+<div>
+</div>
+  
+</div>
+  
+</body>
+
+</html>

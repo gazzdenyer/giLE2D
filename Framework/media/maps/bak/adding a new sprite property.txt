@@ -1,0 +1,40 @@
+Adding a new sprite property
+
+
+*Add the property to TSpriteBlock
+
+*Add a const value if applicable
+
+*Add to TSpriteBlock.Copy
+
+*Add the property to function TGazzMap.MakeParamLine(ASprite: TSpriteBlock): string;
+
+*Add the property to function TSpriteBlock.CreateFromString(AString: string): TSpriteBlock;
+
+*If applicable, Add the property to procedure SetDefaultSpriteProperties(ASprite: TSpriteBlock; AType: integer);
+
+*Add object inspector panel constant (e.g. INS_PNL_XXXX)
+
+*Add properties to Object Inspector
+
+*Add the property to procedure TMover.PopulateProperties(ASender: TSpriteBlock);
+
+*Add the property to procedure TfmMain.EditProperties(ASprite: TSpriteBlock; Sender: TObject); based on the setter control and TAG
+
+
+
+IN AGK:
+
+*Add to type TSpritemap_Data, main.agk
+
+*maploader.agc, function parseline(sprite as string)
+
+*Add to assign rest of properties, maploader.agc, function rendersprite()
+
+*Add to any updateplayer call
+
+*Add to CreatePlayer in player.agc
+
+
+
+ANY MAP FILE CREATED MUST HAVE THE VALUE APPENDED TO IT MANUALLY BEFORE LOADING IT.

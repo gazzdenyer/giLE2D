@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014/11/02 14:17:28.000.215,=C:\Dev\gile2dXE5\Unit1.pas</Transaction>
+    <Transaction>2014/11/02 14:18:08.000.391,C:\Dev\gile2dXE5\uNewFramewrokProject.pas=C:\Dev\gile2dXE5\Unit1.pas</Transaction>
+    <Transaction>2014/11/02 14:18:08.000.391,C:\Dev\gile2dXE5\uNewFramewrokProject.dfm=C:\Dev\gile2dXE5\Unit1.dfm</Transaction>
+    <Transaction>2014/11/02 14:21:31.000.741,C:\Dev\gile2dXE5\uNewFrameworkProject.dfm=C:\Dev\gile2dXE5\uNewFramewrokProject.dfm</Transaction>
+    <Transaction>2014/11/02 14:21:31.000.741,C:\Dev\gile2dXE5\uNewFrameworkProject.pas=C:\Dev\gile2dXE5\uNewFramewrokProject.pas</Transaction>
+    <Transaction>2014/11/06 18:10:37.000.034,=C:\Dev\gile2dXE5\Unit1.pas</Transaction>
+    <Transaction>2014/11/06 18:10:49.000.774,C:\Dev\gile2dXE5\Unit1.pas=C:\Dev\gile2dXE5\uRecentItems.pas</Transaction>
+  </Transactions>
+</BorlandProject>

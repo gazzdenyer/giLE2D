@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Adding Your First Sprite - Sprite Types</title>
+<style type="text/css">
+.auto-style1 {
+	background-image: url('images/dirtCenter.png');
+}
+.auto-style2 {
+	text-align: center;
+}
+.auto-style3 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style4 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style8 {
+	border: 1px solid #99CCFF;
+	background-color: #99CCFF;
+}
+</style>
+</head>
+
+<body style="background-image: url('images/castleCenter.png')">
+
+<div class="auto-style2">
+
+<table align="center" class="auto-style1" style="width: 80%">
+	<tr>
+		<td class="auto-style4"><strong>Adding Your First Sprite - Sprite Types</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Alrighty then, its high time we start getting some stuff into our map... 
+		isn't it... or is it?<br />
+		First, I'd really like to tell you about Sprite Types. Its kinda 
+		important.<br />
+		If you take a look near the top left of <strong>giLE2D</strong>, you 
+		will see a drop down called "Sprite Type To Create". This is important 
+		and somewhat cool.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="spritetypes dropdown" height="360" longdesc="spritetypes dropdown" src="images/spritetypes_dropdown.png" width="525" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    We can see from this list that there are nine pre-defined sprite types 
+		that are incorporated into <strong>giLE2D</strong>. Later on, we will 
+		discover that we can create an ENORMOUS number of different sprite 
+		types, by adjusting the 31 properties that each sprite has, but for now, 
+		this helps us quickly add sprites with pre-defined properties. This 
+		really helps speed map development up!<br />
+		<br />
+		Anyway, I will list each pre-defined sprite type, and tell you just 
+		exactly what the definition of each type is...</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    <table cellpadding="3" cellspacing="3" class="auto-style8" style="width: 100%">
+			<tr>
+				<td style="width: 182px"><strong>1-Map Geometry</strong></td>
+				<td><em>This sprite type defines anything in the map that is 
+				static, and can be assumed to be a platform, ground or other 
+				rigid body</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px; height: 23px"><strong>2-Collectable 
+				Item</strong></td>
+				<td style="height: 23px"><em>This sprite type can be picked up 
+				by the player, embuing said player with points, health, money or 
+				whatever you code it for!</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px"><strong>3-Scenery Block</strong></td>
+				<td><em>This sprite type is part of the map scenery, similar to 
+				type 1, but you can "pass over" or "through" it. Think trees, 
+				rocks, signs, etc.</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px; height: 42px"><strong>4-Enemy Entity</strong></td>
+				<td style="height: 42px"><em>A sprite type that is your enemy! 
+				Can be configured to do damage. Its collision is set so that if 
+				the player touches it, damage is done! Think lava, water, 
+				critters, prickly cactus, pools of horse manure, etc.</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px"><strong>5-Friendly Entity</strong></td>
+				<td><em>A sprite type that is your friend! Can be configured to 
+				help you! Depending on how you code, it can follow you, give you 
+				manna, be your surrogate mother, etc.</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px"><strong>6-Moving Platform</strong></td>
+				<td><em>The sprite type can be configured to move around the 
+				screen, given minimum and maximum x and y coordinates. Surely an 
+				elevating experience! The player can jump onto them and feel 
+				uplifted!</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px"><strong>7-SpringBoard</strong></td>
+				<td><em>BOOOIIINNG! This sprite can be used as a jump pad! 
+				Maximum height can be configured, along with collision dynamics.</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px"><strong>8-Teleporter</strong></td>
+				<td><em>Beam me up (or across, or down) Scotty! This sprite 
+				takes destination x and y coordinates, and transports the player 
+				there! See the example frameworks for example code.</em></td>
+			</tr>
+			<tr>
+				<td style="width: 182px"><strong>9-Player Start</strong></td>
+				<td><em>The most important sprite type. This is a marker that 
+				defines where your player will start on the map (just make sure 
+				you use an appropriate representation!)</em></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    When we eventually go to add a sprite to the map, we will pick one of 
+		these pre-defined sprite types. It will help us to quickly create our 
+		prototypes.<br />
+		<strong>But</strong>, there is another thing that we need to be aware of 
+		before adding sprites... and that is the use of <strong>LAYERS</strong>.<br />
+		Layers will allow us to code for stuff like "<em>should the player pass 
+		in front of, or behind this doo-hickey..</em>." type thing.<br />
+		<br />
+		Layers allow us to control the rendering, or "Z-Order" of the sprites. 
+		It also allows us to group like-sprites together!</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Ummmm... we're getting there!<br />
+		So, the next thing I should tell you about is map layers then...eh?. If you want to read 
+		about that now, then go ahead and<strong><a href="AddingYourFirstSpriteTheLayerManager.html"> 
+		click here</a></strong>, else go back to the <a href="index.html">
+		<strong>home screen</strong></a>!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	</table>
+
+<p class="auto-style4">&nbsp;</p>
+<div>
+</div>
+  
+</div>
+  
+</body>
+
+</html>

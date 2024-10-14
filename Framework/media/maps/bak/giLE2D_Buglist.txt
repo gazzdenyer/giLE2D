@@ -1,0 +1,48 @@
+BUG  (RESOLVED)
+----
+Add sprite from list (default type, default layer).
+Move sprite.
+Click manage Layers, choose a layer.
+Click Show All Layers... the newly added sprite reverts to its original position
+
+
+CAUSE
+------
+Bug is being caused by reading FMapStringList, whick is not updated after moving the sprite
+
+
+SOLUTION
+----------
+When a sprite is moved, its new position has to be updated in the internal FMapStringList.
+This should probably be on the TMover.ControlMouseUp method.
+// NEED code here to update the sprite position in FMapStringList
+  TGazzMap.CreateFileContents(self, FMapStringList, MapBackground); // this should do it ???
+
+
+
+
+
+BUG  (RE-OPENED)
+----
+When in clone mode, addig a sprite does not increase FileID property (FSpriteCount)
+
+
+CAUSE
+------
+FSpriteCount is not being incremented and assigned to the clone
+
+
+SOLUTION
+---------
+Increase FSpriteCount in clone mode. Make sure its assigned to TSpriteBlock.FIleID
+
+
+
+
+
+POTENTIAL BUG (RESOLVED)
+---------------
+
+Allow saving when only partial layers shown? (may only save the visible layer!!!)
+
+Make sure all layers are loaded before save.

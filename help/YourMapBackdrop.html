@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Your Map Backdrop</title>
+<style type="text/css">
+.auto-style1 {
+	background-image: url('images/dirtCenter.png');
+}
+.auto-style2 {
+	text-align: center;
+}
+.auto-style3 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style4 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.full-frame{width:100%;height:100%}
+.auto-style7 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body style="background-image: url('images/castleCenter.png')">
+
+<div class="auto-style2">
+
+<table align="center" class="auto-style1" style="width: 80%">
+	<tr>
+		<td class="auto-style4"><strong>Your Map Backdrop!</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  <iframe name="I1" src="http://www.youtube.com/embed/pAyf6eZeB1g" style="width: 560px; height: 420px" id="I1" class="auto-style7">
+				Your browser does not support inline frames or is currently configured not to display inline frames.
+			</iframe>
+		</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    OK, in this section, we are going to learn how to add backdrops to your 
+		map.<br />
+		Since there are two types of map by default that we can create, static 
+		and scrolling, we will pick the more involved backdrop, which is 
+		scrolling. But first a note on static maps.<br />
+		<br />
+		<em>A static map will generally have only one backdrop. Therefore, if 
+		you pick this option when you create your map (see </em>
+		<a href="createamap.html" target="_blank"><em>Creating Your First Map</em></a><em>) 
+		then the Back Drop dialog, pictured below, will only have the first slot 
+		open. This does not mean to say that you are limited, though. It 
+		entirely depends on how you code your game.<br />
+		You could have chosen the scrolling map option when creating your map, 
+		but your game code dictates entirely how you utilize these resources!</em><br />
+		<br />
+		Anyway, go ahead and create a scrolling map (if you have not done so 
+		already). <br />
+		As you know, giLE2D comes with some cheap artwork! So, for this example, 
+		I'm going to use it!<br />
+		Now, with infinite enthusiasm... do the following.<br />
+		<br />
+		1. Click on the "Back Drops" button, shown below. The "Edit/Change Back 
+		Drop Files" dialog will appear to you.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="backdrop button" height="153" longdesc="backdrop button" src="images/backdrop_button.png" width="304" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3" style="height: 22px">
+  	    In this dialog below, you will see four slots. giLE2D supports up to 
+		four layered backdrops for your maps. The key here is to already have 
+		your backdrop files ready.<br />
+		In this example, I am only going to use three backdrop files, since the 
+		scroller framework suppied with giLE2D is coded for only three. But, as 
+		usual, you are free to modify this code for your own devices!<br />
+		<br />
+		Anyway, I recommend that you start with the background file (like a sky, 
+		etc... something thats going to look like its in the far distance).</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="backdrop empty" height="420" longdesc="backdrop empty" src="images/backdrop_empty.png" width="741" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    To add the first file, double-click on the first slot. A "Load 
+		Background" dialog will appear. Simply navigate to where you keep all 
+		your map media, and choose your far-distance backdrop file. In this 
+		case, I am using a nice space themed PNG file called "back1.png".<br />
+		<br />
+		<em>NOTE: It is necessary for these files to be 1136 pixels in width, so 
+		that the image can be repeated correctly by the framework code. Again, 
+		you can always code this to your liking, but for the example framework, 
+		make sure it is 1136px wide. A netter explanation of this is given </em>
+		<a href="createamap.html#1136x340" target="_blank"><em>here</em></a>.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="backdrop back" height="415" longdesc="backdrop back" src="images/backdrop_back.png" width="725" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    To add the second file, double-click on the second slot. Again, a "Load 
+		Background" dialog will appear. Simply navigate to where you keep all 
+		your map media, and choose your mid-distance backdrop file. In this 
+		case, I am using a nice mountain range themed PNG file called 
+		"range1.png". It has an alpha channel in it that will allow me to see 
+		the far-distance backdrop through it.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3" style="height: 23px">
+  	    </td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="backdrop mid" height="425" longdesc="backdrop mid" src="images/backdrop_mid.png" width="721" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Finally, to add the third file, double-click on the third slot. Again, a 
+		"Load Background" dialog will appear. Simply navigate to where you keep 
+		all your map media, and choose your foreground-distance backdrop file. 
+		In this case, I am using a nice grassy-tree-ish range themed PNG file 
+		called "ground1.png". It has an alpha channel in it that will allow me 
+		to see both the far-distance and the mid-distance backdrop through it.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="backdrop front" height="395" longdesc="backdrop front" src="images/backdrop_front.png" width="713" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    You will now see a nice little preview of how the combined backdrop will 
+		actually look (my programmer art notwithstanding).</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="backdrop done" height="406" longdesc="backdrop done" src="images/backdrop_done.png" width="711" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    If you are happy, or just plain impatient, go ahead and click "OK". The 
+		backdrop will now be rendered in the main giLE2D editor.<br />
+		Note that it appears stretched! Well, thats because we did not go to the 
+		length of tiling the images across the repeater multiplier that you 
+		chose when <a href="createamap.html" target="_blank">creating your map</a>. 
+		It keeps things less complicated resource wise.<br />
+		When you get to the point of actually running the map in the example 
+		framework supplies, you will see the backdrops scrolling by at different 
+		rates, all correctly tiled and repeated. This is <strong><em>parallax 
+		scrolling</em></strong> at work!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="backdrop full" height="492" longdesc="backdrop full" src="images/backdrop_full.png" width="700" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Well, that concludes this section!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+		So, the next thing I should tell you about would be starting to add some 
+		sprites and game objects to your erstwhile barren map! If you want to read 
+		about that now, then go ahead and<strong><a href="AddingYourFirstSpriteSpriteTypes.html" target="_blank"> 
+		click here</a></strong>, else go back to the <a href="index.html">
+		<strong>home screen</strong></a>!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	</table>
+
+<p class="auto-style4">&nbsp;</p>
+<div>
+</div>
+  
+</div>
+  
+</body>
+
+</html>

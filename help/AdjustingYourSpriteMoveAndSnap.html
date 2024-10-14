@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Adjusting Your Sprite - Move And Snap</title>
+<style type="text/css">
+.auto-style1 {
+	background-image: url('images/dirtCenter.png');
+}
+.auto-style2 {
+	text-align: center;
+}
+.auto-style3 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style4 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body style="background-image: url('images/castleCenter.png')">
+
+<div class="auto-style2">
+
+<table align="center" class="auto-style1" style="width: 80%">
+	<tr>
+		<td class="auto-style4"><strong>Adjusting Your Sprite - Move And Snap</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Oooohhh, the long and weary road travelled!<br />
+		<br />
+		Now, at last, we can add a sprite to the map!... or can we? (just 
+		joking)</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    So, armed with the knowledge from the<em> "adding your first sprite"</em> 
+		sections <a href="AddingYourFirstSpriteSpriteTypes.html" target="_blank">
+		here</a> and
+		<a href="AddingYourFirstSpriteTheLayerManager.html" target="_blank">here</a>, 
+		its time to get it on, so to speak.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Lets start with an example.<br />
+		<br />
+		I want my player to be able to stand on something. Something that isn't 
+		going to scratch, deface, disembowel, or kill him/her/it. (we need to 
+		include "it" here so as to not offend game characters of a neutral 
+		disposition).<br />
+		<br />
+		Well then, what am I to do?<br />
+		<br />
+		To me, this sounds like a piece of map geometry that we wany to add 
+		(player can stand on it, doesn't hurt him/her/it), etc.<br />
+		OK, lets set it up!<br />
+		<br />
+		First, with your nice, new map opened in <strong>giLE2D</strong>, do the 
+		following:</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    1. Make sure you have selected the "Media" tab in the <strong>giLE2D</strong> 
+		browser. Also make sure you have the "Available Sprites" tab selected. 
+		Look at the image below... its shows you.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="sprite select" height="474" longdesc="sprite select" src="images/sprite_select.png" width="379" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    2. Now, looking at the image above... and using the stock artwork 
+		supplied with <strong>giLE2D</strong>, I have found a sprite image that 
+		will stand in nicely for some sort of Map Geometry block (a platform, 
+		the ground, etc). It is called "dirtMid.png", and it is going to be the 
+		stuff that my player can stand and run/jump on!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    3. But, before I put this sprite into my map, I am going to use the 
+		"Sprite Type To Create" and the "Create Sprite In Layer" dropdowns to 
+		pick my sprite type and layer respectively. I already created layers 
+		(which, if you are reading systematically, you'll know how to do... if 
+		not, the section is
+		<a href="AddingYourFirstSpriteTheLayerManager.html" target="_blank">here</a>), 
+		so I'm going to do this...</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    4. Go to the&nbsp; "Sprite Type To Create" dropdown and select "1-Map 
+		Geometry". Then go to the "Create Sprite In Layer" and select your map 
+		geometry layer you created. In this case, its called "1001-Map 
+		Geometry".</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    5. See that nice "dirtMid.png" file in the Media Browser? double-click 
+		it and watch what happens...</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="First Sprite" height="524" longdesc="First Sprite" src="images/istsprite.png" width="925" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    6. Its IN THE MAP!!! Yeahhh! <strong>giLE2D</strong> will place the 
+		sprite in the map at pre-determined default coordinates. The default 
+		coordinates can be changed in the settings dialog (we'll look at those 
+		later).</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    7. Anyway, I'm excited now! Lets select the sprite by clicking on it and 
+		then we'll drag it around the map. Note that when you select the sprite, 
+		it shows that it is selected by the way it looks, with boxes appearing 
+		around its perimeter:</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="sprite selected" height="167" longdesc="sprite selected" src="images/sprite_selected.png" width="268" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    8. Now just drag it around... fun! Now try to save your map... you'll 
+		get this...</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="no player" height="162" src="images/no_player_defined.png" width="375" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    9. In order for giLE2d to truly understand a map, it needs you to define 
+		where the player is to start! Kinda makes sense. So, we'll go to the&nbsp; 
+		"Sprite Type To Create" dropdown and select "9-Player Start". Then we'll 
+		go to the "Create Sprite In Layer" and select your player layer that you 
+		created. In this case, its called "1004-Player".</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="player start" height="188" longdesc="player start" src="images/player_start_setup.png" width="292" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    10. Now, we're gonna choose a cute little avatar to represent the 
+		player. I'm using the stock media supplied with <strong>giLE2D</strong>, 
+		so I'm gonna pick "300.png"</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="player_av" height="174" longdesc="player_av" src="images/player_av.png" width="303" /><br />
+		<strong>LOLZ!!!</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    11. Double-click on "300.png" and our player is now added to the map! 
+		Drag&nbsp; him/her/it above the map geometry you added earlier to give 
+		him/her/it something to stand on, and now you can save your map (highly 
+		recommended at this point!).</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="player on geo" height="463" longdesc="player on geo" src="images/player_ongeo.png" width="628" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    12. Click the "Save Map" button. You will see a warning that you are 
+		about to overwrite the map file with your changes. If you are ready to 
+		do so, click "Yes, Overwrite Current File". Your map will then be saved.</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	    <img alt="overwrite" height="209" longdesc="overwrite" src="images/overwrite.png" width="374" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    You'll notice that when you are dragging a sprite, that when you let go, 
+		it will snap to the nearest logical point on the map. This too can be 
+		changed through the "Settings" menu (see
+		<a href="giLE2DSettings.html" target="_blank">here</a>).</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Well, that was a long time to mention the word "snap", to which this 
+		section alluded! But I know you were itching to add a sprite or two to 
+		your map!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    Anyway, now you get the gist of how to go about adding stuff to your 
+		map. In the next section, I guess I should tell you about the Property 
+		Inspector, where you can customize everything on an individual sprite 
+		basis!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    If you want to see how to do this, you can <strong>
+		<a href="AdjustingYourSpriteThePropertiesInspector.html" target="_blank">&nbsp;click here</a></strong>, else go back to the <a href="index.html">
+		<strong>home screen</strong></a>!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	    &nbsp;</td>
+	</tr>
+	</table>
+
+<p class="auto-style4">&nbsp;</p>
+<div>
+</div>
+  
+</div>
+  
+</body>
+
+</html>

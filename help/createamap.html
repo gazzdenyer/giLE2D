@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Creating A Map</title>
+<style type="text/css">
+.auto-style1 {
+	background-image: url('images/dirtCenter.png');
+}
+.auto-style2 {
+	text-align: center;
+}
+.auto-style3 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style4 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style5 {
+	text-align: left;
+}
+.auto-style6 {
+	font-family: "Courier New", Courier, monospace;
+}
+.auto-style7 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style8 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+}
+.auto-style9 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #1D4264;
+}
+</style>
+</head>
+
+<body style="background-image: url('images/castleCenter.png')">
+
+<div class="auto-style2">
+
+<table align="center" class="auto-style1" style="width: 80%; height: 273px;">
+	<tr>
+		<td class="auto-style8"><strong>Creating Your First Map</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style8">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  <iframe name="I1" src="http://www.youtube.com/embed/pAyf6eZeB1g" style="width: 560px; height: 420px" id="I1" class="auto-style7">
+				Your browser does not support inline frames or is currently configured not to display inline frames.
+			</iframe>
+		</td>
+	</tr>
+	<tr>
+		<td class="auto-style5" style="height: 78px">
+  	  <span class="auto-style7">First, a note on map creation and resolution...<br />
+		</span><br class="auto-style7" />
+		<span class="auto-style7"><a name="1136x640"></a>After extensive testing on various devices, I 
+		have found that a map resolution of 1136 x 640 (<em>aspect ratio 1.775, 
+		16:9</em>) creates the best results. AGK uses a system called<em><strong> 
+		virtual resolution</strong></em>, which brilliantly adapts to each 
+		device (even on a Windows PC!). To read more, you can review the AGK 
+		command</span> <span class="auto-style6">
+		<a href="http://www.appgamekit.com/documentation/Reference/Core/SetVirtualResolution.htm" target="_blank">
+		setVirtualResolution</a></span> <span class="auto-style7">on AGK's 
+		website. This is why giLE2D only supports one resolution so far (don't 
+		worry... more are planned as a free upgrade to registered users!).<br />
+		<br />
+		Also, it is necessary for you to have previously created an AGK project, 
+		complete with its <em><strong>/media</strong></em> folder. gilE2D will 
+		look for this when you create your maps, since it needs to know what 
+		media to load for your project. An example of a typical AGK project file 
+		structure can be seen below:</span></td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">
+  	  <img alt="AGK Project File Structure Example" height="364" longdesc="AGK Project File Structure Example" src="images/agkprojexample.png" width="472" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  <strong>Right, lets dig in!</strong><br />
+		<br />
+		OK, to create a new map, we must first click on the "<em>New Map</em>" 
+		button in giLE2D's main toolbar.<br />
+		When you do this, the following dialog will appear:</td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">
+  	    <img alt="" height="347" src="images/dlgNewMap.png" width="402" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	  <span class="auto-style7">You'll notice that the active field in the 
+		dialog is the "<em>Map Name</em>" field. It is <strong><em>HIGHLY 
+		RECOMMENDED</em></strong> that you name your maps thusly:</span><br class="auto-style7" />
+		<br class="auto-style7" />
+		<span class="auto-style9"><em><strong>map1</strong></em></span><em><strong><br class="auto-style9" />
+		</strong></em><span class="auto-style9"><em><strong>map2</strong></em></span><em><strong><br class="auto-style9" />
+		</strong></em><span class="auto-style9"><em><strong>map3</strong></em></span><br class="auto-style7" />
+		<span class="auto-style7">... and so on...</span><br class="auto-style7" />
+		<br class="auto-style7" />
+		<span class="auto-style7">Later, when you come to write a parser or, 
+		maybe, even use my parsing example, you'll see that this will give you a 
+		nice natural order.</span><br class="auto-style7" />
+		<br class="auto-style7" />
+		<span class="auto-style7">Anyway, or as my <strong>
+		<a href="http://www.thegamecreators.com" target="_blank">TGC</a></strong> 
+		pals might say... "any road-up", in the "<em>Map Name</em>" field, type 
+		"<strong><em>map1</em></strong>"<br />
+		<br />
+		Now then, you'll notice that the "<em>AGK Project Media Folder</em>" 
+		field has a nice little navigation button with two folders at the end of 
+		it that you can click, instead of typing in the full path to your AGK 
+		projects media folder. Clicking this button gives you the following 
+		standard Windows <em>choose folder</em> dialog.</span></td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">
+  	  <img alt="Choose Folder Dialog" height="343" longdesc="Choose Folder Dialog" src="images/ChooseFolder.png" width="333" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  Use this dialog to navigate to your AGK projects media folder, select it, 
+		then click OK. You'll end up with the "<em>New Map</em>" dialog looking 
+		kinda like this:</td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">
+  	    <img alt="New Map" height="346" longdesc="New Map" src="images/dlgNemMapComplete.png" width="402" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	    <span class="auto-style7">Now, if you noticed, there is also a group box 
+		on this dialog, titled "<em>Map Type</em>". <strong>giLE2D</strong> 
+		makes provision for non-scrolling and scrolling type games. If you 
+		choose the non-scrolling option, <strong>giLE2D</strong> will create a 
+		map with a resolution of 1136 x 640. However, if you choose the 
+		scrolling option, you will be asked to supply a "<em>Repeat Multiplier</em>" 
+		value. This tells <strong>giLE2D</strong> how many times to repeat the 
+		backdrops of a map in the X-Plane (X-direction). </span>
+		<br class="auto-style7" />
+		<br class="auto-style7" />
+		<span class="auto-style7">For example, our base resolution is 1136x640. 
+		So the maximum x value of the map is 1136 for a static, non-scrolling 
+		map before we hit the edge of the screen. However, for a scroller, we do 
+		not want to hit this limit, so the repeat multiplier tells <strong>
+		giLE2D</strong> how much to extend the x-plane. </span>
+		<br class="auto-style7" />
+		<br class="auto-style7" />
+		<span class="auto-style7">So, if you were to choose a repeat value of 3, 
+		the map dimensions would be (1136*3)x640, or 3048x640. This extends the 
+		map beyond the screen and, using some code in AGK, allows the creation 
+		of a scrolling map. We have supplied basic framework AGK Basic code for 
+		a parallax scrolling game and we highly recommend you look at the code 
+		to see how it all works!<br />
+		<br />
+		For the time being, just select the non-scrolling option to get started. 
+		We will discuss scrollers later.</span></td>
+	</tr>
+	<tr>
+		<td class="auto-style5">
+  	    &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  Now you can click the OK button. Incidentally, there's nothing to stop you 
+		typing in the path... if it doesn't exist then giLE2D will tell you, and 
+		then you'll get frustrated. Honest. I don't care really! If typing stuff 
+		is your M.O. then more power to ya!<br />
+		<br />
+		So, after you click OK, giLE2D will attempt to check the validity of the 
+		claims you made in the fields above. It will look to see that a real AGK 
+		project exists in the location you specified. If it can't validate that 
+		a real AGK project is there, it'll complain (and maybe cry some). No 
+		harm no foul, just fill in the correct stuff and giLE2D will create your 
+		new map project!<br />
+		<br />
+		Well then, the next thing you are likely to see is the following:</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	  <img alt="Loading A Map" height="570" longdesc="Loading A Map" src="images/loadingamap.png" width="926" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3" style="height: 22px">
+  	  I took the above screenie while giLE2D was loading all the media it could 
+		find inside the media folder you chose from the "<em>New Map</em>" 
+		dialog. You'll see the progress bar whizz to 100%, and then ... you'll 
+		be ready to rock and roll... your creativity glands oozing mappy 
+		hormones that just can't be stopped by mere mortals...
+		</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  Hell... when its done loading, you might even see this...</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">
+  	  <img alt="Loading Done" height="538" longdesc="Loading Done" src="images/loadingamapdone.png" width="925" /></td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  <em>Oooooh!... Look....!&nbsp; The "Available Sprites" tab has been 
+		populated with all the stuff thats in my media folder...!</em> ... not a 
+		surprise, really I guess, if there was stuff in there to begin with...</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  &nbsp;</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  Anyhoo, that takes care of telling you how to create a new map project! 
+		Ummmm... not too exciting yet, but wait till we get into it... it'll be 
+		fun!<br />
+		So, the next thing I should tell you about would be concerning the 
+		actual media and how it relates to your AGK project. If you want to read 
+		about that now, then go ahead and<strong><a href="MediaAndYourAGKProject.html"> 
+		click here</a></strong>, else go back to the <a href="index.html">
+		<strong>home screen</strong></a>!</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">
+  	  &nbsp;</td>
+	</tr>
+	</table>
+
+<p class="auto-style4">&nbsp;</p>
+<div>
+</div>
+  
+</div>
+  
+</body>
+
+</html>
